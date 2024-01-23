@@ -1,0 +1,48 @@
+@import "../../theme/spacing";
+@import "../../theme/colors";
+@import "../../theme/typography";
+@import "../../theme/typography";
+@import "../../theme/global";
+
+$virtualized-first-cell-width: 350px;
+
+.match-fixed-header {
+  position: sticky;
+  height: $spacing-xl;
+  top: $spacing-zero;
+  background-color: $color-silver;
+  z-index: index($zIndexLevels, master);
+  @include text-alignment(center);
+
+  .virtualized-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.match-header,
+.match-odds {
+  display: contents;
+
+  .virtualized-cell:first-child {
+    width: $virtualized-first-cell-width;
+  }
+
+  .virtualized-cell:not(:first-child) {
+    @include text-alignment(center);
+  }
+}
+
+.match-fixed-header, .virtualized-container, {
+  display: grid;
+  grid-template-columns: repeat(19, 1fr);
+  align-items: center;
+  border: 1px solid $color-silver;
+}
+
+.selected {
+  background-color: $color-silver;
+}
+
+

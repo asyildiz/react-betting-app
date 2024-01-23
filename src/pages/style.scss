@@ -1,0 +1,12 @@
+@import "../theme/colors";
+@import "../theme/spacing";
+@import "../theme/global";
+
+.fixture-header {
+  position: absolute;
+  height: $spacing-lg;
+  border: $spacing-xxxs solid $color-black;
+  z-index: index($zIndexLevels, ultimate-master);
+  width: 100%;
+}
+

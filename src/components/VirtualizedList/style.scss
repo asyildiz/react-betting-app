@@ -1,0 +1,43 @@
+@import "../../theme/spacing";
+@import "../../theme/colors";
+@import "../../theme/typography";
+
+.virtualized-list-container {
+  overflow-y: auto;
+  position: relative;
+
+  > div {
+    position: absolute;
+    top: $spacing-zero;
+    left: $spacing-zero;
+    right: $spacing-zero;
+  }
+
+  .virtualized-row {
+    width: 100%;
+    position: absolute;
+  }
+}
+
+.virtualized-cell {
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: $spacing-xxs;
+  border: 1px solid $color-silver;
+
+  &.clickable {
+    cursor: pointer;
+  }
+
+  span, b {
+    &:not(:last-child) {
+      padding-right: $spacing-xxs;
+    }
+  }
+}
+
+.virtualized-list-header {
+  position: sticky;
+}

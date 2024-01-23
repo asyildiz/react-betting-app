@@ -1,0 +1,36 @@
+@import "../../theme/spacing";
+@import "../../theme/colors";
+@import "../../theme/typography";
+@import "../../theme/shadows";
+
+$basket-width: 450px;
+
+.basket-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top-left-radius: $spacing-st;
+  background-color: $color-white;
+  bottom: $spacing-zero;
+  right: $spacing-zero;
+  padding: $spacing-md;
+  width: $basket-width;
+  box-shadow: $spacing-zero $spacing-xxs $spacing-xs $shadow-level4;
+  position: fixed;
+
+  .basket-amount {
+    font-weight: $font-weight-bold;
+  }
+
+  .basket-items {
+    padding-bottom: $spacing-xs;
+  }
+
+  .basket-row-item-container {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacing-st $spacing-zero;
+
+    .basket-row-item-head {
+      display: flex;
+    }
+  }
+}
