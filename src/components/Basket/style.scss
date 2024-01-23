@@ -11,7 +11,7 @@ $basket-width: 450px;
   background-color: $color-white;
   bottom: $spacing-zero;
   right: $spacing-zero;
-  padding: $spacing-md;
+  padding: $spacing-sm;
   width: $basket-width;
   box-shadow: $spacing-zero $spacing-xxs $spacing-xs $shadow-level4;
   position: fixed;
@@ -28,9 +28,17 @@ $basket-width: 450px;
     display: flex;
     justify-content: space-between;
     padding: $spacing-st $spacing-zero;
+    border-bottom: 1px solid $color-silver;
+
 
     .basket-row-item-head {
       display: flex;
+
+      p {
+        &:not(:last-child) {
+          padding-right: $spacing-xxs;
+        }
+      }
     }
   }
 }
