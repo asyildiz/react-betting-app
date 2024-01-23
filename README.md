@@ -12,7 +12,7 @@ Clone the repository
     git clone https://github.com/asyildiz/react-betting-app
    ```
 
-Install NPM packages
+Install the required packages
    ```bash
    yarn install
    ```
