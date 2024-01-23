@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
+import { BasketProvider } from "./context";
+import { FixtureListing } from "./pages";
+import "./App.scss";
 
 function App() {
   return (
-    <div className="App"></div>
+    <BasketProvider>
+      <FixtureListing />
+    </BasketProvider>
   );
 }
 

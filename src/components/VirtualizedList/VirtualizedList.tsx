@@ -53,7 +53,9 @@ export const VirtualizedList: React.FC<VirtualizedListProps> = ({
               key={index}
               style={{ minWidth: item.minWidth }}
             >
-              {item.label === "Event Count:" ? item.label + items.length : item.label}
+              {item.label === "Event Count:"
+                ? item.label + items.length
+                : item.label}
             </div>
           ))}
         </div>
@@ -79,14 +81,14 @@ export const VirtualizedList: React.FC<VirtualizedListProps> = ({
           {visibleItems.map((item, index) => (
             <div
               className="virtualized-row"
-              key={item.C} 
+              key={item.C}
               style={{
                 height: itemHeight,
                 // @ts-ignore
                 top: `${(index + Math.floor(containerRef.current?.scrollTop / itemHeight)) * itemHeight}px`,
               }}
             >
-              <FixtureRowItem rowItem={item} onClick={() => {}}  />
+              <FixtureRowItem rowItem={item} onClick={() => {}} />
             </div>
           ))}
         </div>

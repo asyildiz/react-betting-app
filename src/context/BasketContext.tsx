@@ -48,17 +48,22 @@ export const BasketProvider: React.FC<BasketProviderProps> = ({ children }) => {
 
   const removeItemFromBasket = (matchId: string, odd: string) => {
     const filteredBasketItems = basketItems.filter(
-      (basketItem) =>
-        basketItem.selectedOdd !== parseFloat(odd)
+      (basketItem) => basketItem.selectedOdd !== parseFloat(odd),
     );
 
     setBasketItems(filteredBasketItems);
   };
 
   const updateBasket = (odd: string, item: FixtureItem) => {
-    const addedMatches = basketItems.filter((basketItem) => basketItem.C === item.C);
+    const addedMatches = basketItems.filter(
+      (basketItem) => basketItem.C === item.C,
+    );
     if (addedMatches.length) {
-      if (addedMatches.filter((basketItem) => basketItem.selectedOdd === parseFloat(odd)).length) {
+      if (
+        addedMatches.filter(
+          (basketItem) => basketItem.selectedOdd === parseFloat(odd),
+        ).length
+      ) {
         removeItemFromBasket(item.C, odd);
         return;
       }
@@ -67,7 +72,7 @@ export const BasketProvider: React.FC<BasketProviderProps> = ({ children }) => {
     } else {
       addItemToBasket(odd, item);
     }
-  }
+  };
 
   return (
     <BasketContext.Provider
