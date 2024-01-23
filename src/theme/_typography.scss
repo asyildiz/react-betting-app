@@ -1,0 +1,31 @@
+$font-weight-light: 300;
+$font-weight-normal: 500;
+$font-weight-bold: 700;
+
+$font-family-default: "Source Sans Pro", sans-serif;
+
+$font-size-default: 10px;
+
+@mixin text-alignment($alignment) {
+  text-align: $alignment;
+}
+
+.align-left {
+  @include text-alignment(left);
+}
+
+.align-right {
+  @include text-alignment(right);
+}
+
+.align-center {
+  @include text-alignment(center);
+}
+
+* {
+  font-family: $font-family-default;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+}
